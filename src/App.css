@@ -1,0 +1,163 @@
+body{
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+.appBox{
+    margin: 0px 20vw;
+    background-color: aliceblue;
+    border-style: groove;
+    border-width: thick;
+    border-color: darkred;
+}
+
+.taskForm{
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.title{
+    background-color: rgb(230, 61, 101);
+    margin: 5px 10vw;
+    border-radius: 25px;
+    color: white; 
+
+    border-style: ridge;
+    border-width: thin;
+    border-color: wheat;
+
+    letter-spacing: 0.3vw;
+    font-family: 'Smooch Sans', sans-serif;;
+}
+
+.input{
+    margin: 5px 0px;
+    width: 20vw;
+    padding: 5px;
+}
+
+button{
+    font-size: 14px;
+}
+
+.add{
+    background-color: royalblue;
+    color: white;
+    width: 10vw;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.clear{
+    background-color: green;
+    color: white;
+    width: 10vw;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.edit{
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 10vw;
+    padding: 5px;
+    color: white;
+    background: rgb(255,110,127);
+    background: linear-gradient(135deg, rgba(255,110,127,1) 0%, rgba(210,83,92,1) 100%);
+    cursor: pointer;
+}
+
+.list{
+    padding: 0px;
+    margin: 5vh 5vw;
+    
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px;
+
+    animation-name: displayList;
+    animation-duration: 0.25s
+}
+
+@keyframes displayList{
+    0%{ opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.item{
+
+    display: grid;
+    grid-template-columns: 5% 85% 5% 5%;
+
+    color: white;
+    list-style: none;
+    padding: 10px;
+    background: rgb(255,110,127);
+    background: linear-gradient(135deg, rgba(255,110,127,1) 0%, rgba(210,83,92,1) 100%);
+
+    font-family: 'Chakra Petch', sans-serif;
+
+    border-style: dashed;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-width: 2px;
+    border-color: #FAFA37;
+
+    animation-name: displayItem;
+    animation-duration: 0.5s;
+}
+
+.item.checked{
+
+    background-color: green;
+
+    animation-name: success;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes success {
+    0%{background: rgb(255,110,127);}
+    100%{background: green;}
+}
+
+.taskStatus:checked{
+    pointer-events: auto;
+}
+
+
+.taskStatus{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.item .taskStatus:checked{
+    background-color: red;
+}
+
+.taskName{
+    margin: 0px;
+}
+
+@keyframes displayItem {
+    0%{ opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.leftTodo{
+    color: #100C08;
+    margin: 5px 0px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Press Start 2P', cursive;
+
+    animation-name: highlightTodo;
+    animation-duration: 0.5s;
+}
+
+@keyframes highlightTodo {
+    0%{transform: scale(0.5);}
+    100%{transform: scale(1);}
+}
